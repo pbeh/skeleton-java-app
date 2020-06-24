@@ -2,3 +2,9 @@ language: java
 jdk:
 - openjdk8
 script: mvn clean verify
+
+deploy:
+ provider: heroku
+ api_key:
+ secure: dba03fac-d923-4c46-84f8-159d2947a519
+ app: skeleton-in-the-closet

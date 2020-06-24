@@ -16,6 +16,11 @@ public class QueryProcessorTest {
   }
 
   @Test
+  public void knowsWhoWroteTheHitchHikersGuideToTheGalaxy() throws Exception {
+    assertThat(queryProcessor.process("Who wrote the Hitchhiker's guide to the galaxy"), containsString("Douglas Adams"));
+  }
+
+  @Test
   public void isNotCaseSensitive() throws Exception {
     assertThat(queryProcessor.process("who wrote romeo and juliet"), containsString("Shakespeare"));
   }
